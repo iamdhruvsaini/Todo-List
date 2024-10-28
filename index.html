@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./style/output.css" rel="stylesheet" />
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+  <div class="todo-screen w-full bg-[#FF6666] min-h-dvh flex justify-center items-center ">
+    <div class="bg-[#FF6666] w-full sm:w-8/12 md:w-7/12 lg:w-2/5 xl:w-2/5 2xl:w-4/12 py-4 sm:rounded-3xl sm:border-2 pl-2">
+      <div>
+        <div class="border-b-white border-b-[1px] border-opacity-40 py-2">
+          <h1 class="text-5xl text-white text-center">Todo List</h1>
+          <h2 class="text-lg text-white py-2 w-fit mx-auto">
+            Get Things done, one item at a time.
+          </h2>
+          <div class="flex justify-center py-4"> 
+            <div class="border inline-flex items-center px-2 rounded-lg">
+              <i data-feather="search" class="text-white"></i>
+              <input type="text" placeholder="Type / to Search" class="h-10 px-3 bg-transparent text-white text-lg font-medium placeholder:text-white outline-none border-none">
+            </div>
+           
+          </div>
+        </div>  
+      </div>
+
+      <ul class="js-itemContainer pt-4 pb-4 flex flex-col gap-2 h-[36vh] lg:h-[28vh] xl:h-[28vh] overflow-y-scroll">
+        <li class="js-list-container-${item.id} flex justify-between bg-[#FF7676] py-4 px-4 rounded-xl 2xl:x-10">
+          <div class="pr-6">
+            <h3 class="text-xl text-white text-wrap text-justify">
+              djnfkjnk
+            </h3>
+          </div>
+          <div class="flex items-center gap-4">
+            <input id="default-checkbox" type="checkbox" class="js-check-box w-5 h-5 rounded" data-input-item-id="${item.id}" />
+            <button class="js-delete-btn">
+              <i data-feather="trash-2" class="text-white hover:text-fuchsia-200 transition duration-150 ease-in-out"></i>
+            </button>
+          </div>
+          
+        </li>
+
+        
+      </ul>
+
+      <div class="flex justify-end items-center gap-3 mt-4 pr-6">
+        <h2 class="text-white text-lg">Move done items at the end?</h2>
+        <input type="checkbox" name="" id="toggle">
+        <label for="toggle" class="switch"></label>
+      </div>
+
+      <div class="pt-8 pr-2 flex flex-col gap-6">
+        <h2 class="text-2xl text-white text-center">Add to the todo list</h2>
+        <div class="flex flex-col items-center gap-6">
+      
+            <input type="text" placeholder="Enter here"
+              class="js-input h-12 w-full bg-white px-2 outline-none text-xl rounded-xl" id="add-to-list" />
+         
+          <button
+            class="js-add-item border-white border-2 bg-transparent font-medium h-12 text-lg rounded-lg text-white px-2">
+            Add Item
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts/index.js" type="module"></script>
+</body>
+
+</html>
